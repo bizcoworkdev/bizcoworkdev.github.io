@@ -55,7 +55,7 @@ Django와 Flask 둘다 Docker-compose의 컨테이너에 올려 세팅했다.
 
 초기환경 세팅의 경우 두 Framework 다 어려운 부분은 없었다. Docker - Frontend - Backend - Webserver - DataBase 간 컨테이너 연결이 가장 어려웠고, 개별적인 세팅의 난이도는 동일했던 것 같다. Backend와 초기버전 세팅의 경우에는 다음에 배포쪽 세팅과 함께 포스팅 할 예정이다.
 
-<center><img src="D:\blog\초기세팅.png" style="zoom:80%;" /></center>
+<center><img src="https://github.com/bizcoworkdev/bizcoworkdev.github.io/blob/master/assets/img/initial-setting.png?raw=true" style="zoom:80%;" /></center>
 <center>초기세팅환경 조직도</center>
 
 
