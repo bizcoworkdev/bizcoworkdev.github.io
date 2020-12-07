@@ -9,7 +9,7 @@ tags: [devlog]
 
 # 개요
 
-기존 외부업체에서 진행한 1cup 페이지는 express로 개발되어 시스템 확장이 힘들거같아, 새 프로젝트를 진행하기로 하였다. 그 중 백엔드쪽 그 중 python Framework에서 어떤 것을 택할지 의사결정을 하게 되었다. Python framework의 양대산맥인 Flask, Django중 고민하였는데, 양쪽 기본환경을 각각 세팅해보고 비교해보았다. 결론부터 말하자면, 새 프로젝트의 백엔드는 **Django**를 이용하기로 하였다. 이번 포스팅에는 Django와 Flask의 장단점, 활용기업을 알아보고 왜 Django를 선택하였는지 써보았다.
+기존 외부업체에서 진행한 1cup 페이지는 express로 개발되어 시스템 확장이 힘들거같아, 새 프로젝트를 진행하기로 하였다. 백엔드쪽에서 고민을 많이 하였는데,  JAVA(Spring)와 python 중 택1 하기로 하였다. 그중 python을 사용하기로 했는데, 우선 배포환경 구성이 간편하고 스크립트언어라 쥬니어 개발자로서 새 프로젝트를 수행하기에 알맞는 것 같아 택했다. 그리고 python Framework에서 어떤 것을 택할지 의사결정을 하게 되었다. Python framework의 양대산맥인 Flask, Django중 고민하였는데, 양쪽 기본환경을 각각 세팅해보고 비교해보았다. 결론부터 말하자면, 새 프로젝트의 백엔드는 **Django**를 이용하기로 하였다. 이번 포스팅에는 Django와 Flask의 장단점을 알아보고 각각 세팅한 환경 그리고 왜 Django를 선택하였는지 써보았다.
 
 
 
@@ -35,36 +35,29 @@ Django framework는 기본적인 기능들 특히 반복적으로 수행하는 �
 
 하지만, 강력한 기능에 뒤따르는 러닝커브와 제약은 Django의 단점이다. Django Rest Framework(DRF)는 강력하고 새로운 디자인패턴을 제공하지만, DRF의 러닝커브는 익히 알려져 있다시피 flask에 비하면 상당히 큰 편이다. 그리고 Django ORM의 경우엔 직관적이지만, Active record 기반이라 복잡한 read-only 쿼리의 경우엔 SQLAlchemy extension 보다 생산성이 떨어지기 쉽다.
 
+>  https://medium.com/@kshitij/django-for-real-designers-f97adfef1355
+
+<center><img src="https://miro.medium.com/max/700/1*9Vvj64asS418DOG96EdgDw.jpeg" style="zoom:50%;" /></center>
+
+<center>  Django Learning Curve</center>
 
 
 
+# 세팅환경
 
-# Reference Site
-
-#### Django
-
+Django와 Flask 둘다 Docker-compose의 컨테이너에 올려 세팅했다.
 
 
-<center><img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"/></center>
+|BackEnd|Web Server|FrontEnd|ORM|DataBase|
+|:---:|:---:|:---:|:---:|:---:|
+|**Django**|NGINX|React|Django ORM|Postgresql|
+|**Flask**|NGINX|React|SQLAlchemy|Postgresql|
 
-<center>Instagram</center>
+초기환경 세팅의 경우 두 Framework 다 어려운 부분은 없었다. Docker - Frontend - Backend - Webserver - DataBase 간 컨테이너 연결이 가장 어려웠고, 개별적인 세팅의 난이도는 동일했던 것 같다. Backend와 초기버전 세팅의 경우에는 다음에 배포쪽 세팅과 함께 포스팅 할 예정이다.
 
-Instagram은 전 서비스가 python을 사용하고 Django framework로 개발된 가장 유명한 사이트이다. 아래는 Instagram의 개발 블로그 포스트 제목 : **[Web Service Efficiency at Instagram with Python](https://instagram-engineering.com/web-service-efficiency-at-instagram-with-python-4976d078e366)** 링크이다. 다수의 사용자가 이용하는 사이트인만큼 Django에서 일어날 수 있는 문제점과 그 해결법, 효율성으로 고민한 흔적이 포스팅 되어있다.
+<center><img src="D:\blog\초기세팅.png" style="zoom:80%;" /></center>
+<center>초기세팅환경 조직도</center>
 
- 
-
-#### Flask
-
-<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/200px-Netflix_logo.svg.png"/></center>
-
-<center>Netflix</center>
-
-Netflix는 DevOps로 Flask를 사용한 Winston을 사용하고 있다. 아래는 Netflix 개발 블로그에 있는 [Monitoring, alert and auto-remediation](https://netflixtechblog.com/python-at-netflix-bba45dae649e) 부분 전문이다.
-
-> # Monitoring, alert and auto-remediation
-
-> The Insight Engineering team is responsible for building and operating the tools for operational insight, alerting, diagnostics, and auto-remediation. With the increased popularity of Python, the team now supports Python clients for most of their services. One example is the [Spectator](https://github.com/Netflix/spectator-py) Python client library, a library for instrumenting code to record dimensional time series metrics. We build Python libraries to interact with other Netflix platform level services. In addition to libraries, the [Winston](https://medium.com/netflix-techblog/introducing-winston-event-driven-diagnostic-and-remediation-platform-46ce39aa81cc) and [Bolt](https://medium.com/netflix-techblog/introducing-bolt-on-instance-diagnostic-and-remediation-platform-176651b55505) products are also built using Python frameworks (Gunicorn + Flask + Flask-RESTPlus).
->
 
 
 
@@ -78,6 +71,7 @@ Django 사용의 결정적인 이유로 몇 개 꼽아보자면,
 - 결성된지 얼마되지 않은 개발팀이라 rule을 새로 만드는데 들이는 시간이 많음
 - 아직 개발자 인력을 모집 중이라, 깔끔한 코드가 필요
 - 주된 ORM 이용방식이 CRUD가 될 예정이라 Active Record 쪽이 더 편리함
+- 간단한 CRUD 앱을 만들었을 때, Django를 사용하는편이 더 여러사람이 협업해도 정돈된 코딩을 할 수 있을 것 같았음
 
 의 이유로 Django를 선택하였다.
 
