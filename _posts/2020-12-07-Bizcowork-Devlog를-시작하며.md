@@ -7,10 +7,6 @@ tags: [devlog]
 
 ---
 
-# Bizcowork Devlog를 시작하며 
-
-
-
 ## Bizcowork 개발팀의 탄생
 
 Bizcowork은 창업 교육 플랫폼을 운영하는 회사이며, 현재 [1cup.kr](https://1cup.kr)을 운영중입니다.
