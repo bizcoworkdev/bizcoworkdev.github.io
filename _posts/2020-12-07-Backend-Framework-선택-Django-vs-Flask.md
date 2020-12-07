@@ -19,11 +19,11 @@ tags: [devlog]
 
 
 
+  
 
+  
 
-
-
-
+  
 
 # Pros and Cons
 
@@ -33,7 +33,7 @@ Flask는 Micro Framework, 간단히 말하면, 앱이 독립된 기능을 가지
 
 하지만, 유연함과 확장성, 손쉬운 개발은 책임감을 부여한다. 뚜렷한 개발규칙이 존재하지 않는다면, 개발자 각각의 코드 스타일에 영향을 받기 쉽고, 협업하기 힘들게 된다. 그리고 CRUD based 앱에서 생산성을 고려하여 ORM 기능을 활용한다면, 별도 ORM extension인 **SQLAlchemy**를 사용하여야 하는데, 이는 Data mapper 기반이라 제약이 적은 Flask에서 제약을 받는 아이러니한 상황이 생길 수 있다.
 
- 
+   
 
 #### Django
 
@@ -49,11 +49,11 @@ Django framework는 기본적인 기능들 특히 반복적으로 수행하는 �
 
 
 
+  
 
+  
 
-
-
-
+  
 
 # 세팅환경
 
@@ -74,11 +74,11 @@ Django와 Flask 둘다 Docker-compose의 컨테이너에 올려 세팅했다.
 
 
 
+  
 
+  
 
-
-
-
+  
 
 # 결론
 
