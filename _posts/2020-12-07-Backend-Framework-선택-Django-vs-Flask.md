@@ -18,7 +18,6 @@ tags: [devlog]
 
 
 
----
 
 # Pros and Cons
 
@@ -38,13 +37,15 @@ Django framework는 기본적인 기능들 특히 반복적으로 수행하는 �
 
 
 
----
+
 
 # Reference Site
 
 #### Django
 
-![Instagram](https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png)
+
+
+<center><img src="https://www.instagram.com/static/images/ico/favicon-192.png/68d99ba29cc8.png"/></center>
 
 <center>Instagram</center>
 
@@ -54,7 +55,7 @@ Instagram은 전 서비스가 python을 사용하고 Django framework로 개발�
 
 #### Flask
 
-![Netflix](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/200px-Netflix_logo.svg.png)
+<center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Netflix_logo.svg/200px-Netflix_logo.svg.png"/></center>
 
 <center>Netflix</center>
 
@@ -64,9 +65,10 @@ Netflix는 DevOps로 Flask를 사용한 Winston을 사용하고 있다. 아래�
 
 > The Insight Engineering team is responsible for building and operating the tools for operational insight, alerting, diagnostics, and auto-remediation. With the increased popularity of Python, the team now supports Python clients for most of their services. One example is the [Spectator](https://github.com/Netflix/spectator-py) Python client library, a library for instrumenting code to record dimensional time series metrics. We build Python libraries to interact with other Netflix platform level services. In addition to libraries, the [Winston](https://medium.com/netflix-techblog/introducing-winston-event-driven-diagnostic-and-remediation-platform-46ce39aa81cc) and [Bolt](https://medium.com/netflix-techblog/introducing-bolt-on-instance-diagnostic-and-remediation-platform-176651b55505) products are also built using Python frameworks (Gunicorn + Flask + Flask-RESTPlus).
 >
-> 
 
----
+
+
+
 
 # 결론
 
