@@ -61,7 +61,7 @@ Bizcowork과 같이 일 할 수 있게된 것도 2020년 하반기 채용에 전
 
 - [ ]  Code review 도입
 
-- [ ]  Bug traking system 도입
+- [ ]  Bug tracking system 도입
 
 Version control으로는 Gitlab을 사용하고 있었기에, 이를 그대로 사용하기로 하고 체크해뒀습니다.
 
