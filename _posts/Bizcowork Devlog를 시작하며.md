@@ -1,10 +1,12 @@
 ---
 
 layout: post
-title: Bizcowork Devlog를 시작하며
-subtitle: 개발자 김용수
-tags: [Bizcowork]
-comments: true
+title: Flake it till you make it
+subtitle: Excerpt from Soulshaping by Jeff Brown
+cover-img: /assets/img/path.jpg
+thumbnail-img: /assets/img/thumb.png
+share-img: /assets/img/path.jpg
+tags: [books, test]
 
 ---
 
