@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: Backend Framework 선택 : Django vs Flask
+title: Backend Framework 선택(Django vs Flask)
 subtitle: 개발자 이영석
 tags: [devlog]
 
