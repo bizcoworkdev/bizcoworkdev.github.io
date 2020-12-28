@@ -3,7 +3,7 @@
 layout: post
 title: Bizcowork Devlog를 시작하며 
 subtitle: 개발자 김용수
-tags: [devlog], [김용수]
+tags: [devlog,김용수]
 
 ---
 
