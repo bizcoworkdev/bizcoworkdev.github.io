@@ -23,13 +23,13 @@ Bizcowork에서는 RESTful한 endpoint 제공을 위해, Django Rest Framework�
 
 Django에서는 사실 RESTful endpoint 제작에 DRF말고 다른건 떠오르지 않을정도로 보편화된 오픈소스 라이브러리입니다. 그래서 오늘은 DRF에서 제공하는 가장 강력한 기능인 Serializer에 대해 알아보고 다양한 Model 상황에서 Serializer의 활용법에 대해 포스팅해보려 합니다.
 
-</br></br>
+<br><br>
 
 # Serializer 
 
 *강력한 기능인건 알겠는데, Serailizer가 뭔데?*
 
-</br>
+<br>
 
 Serialize (직렬화) 는 여러가지 정의가 있는데 여기서 사용할 직렬화란, 서로 다른 환경에서 데이터를 주고받기 위하여 상호 이해할수있는 테이터 구조를 만드는 작업입니다. 
 
@@ -82,11 +82,11 @@ class SnippetSerializer(serializers.ModelSerializer):
 
 Model Serializer의 경우에는 기본 Serializer class를 리팩토링한 Serializer입니다. 한눈에 보기에도 기본형태보다 더 간단해서, 편리하게 사용할 수 있습니다. 필드는 Model에서 정의된 필드들과 속성을 그대로 가져가고, 일부만 필요한 경우, meta class에서 선언해줄 수 있습니다. `create()`와 `update()`메소드도 정의되어있고 기본형태에서 다른 작업이 필요한 경우에는 Override 하여 구현해주면 됩니다. 또한 `validate()` 메소드로 유효성 검사를 Override 할 수 있지만, 저희는 유효성 검사의 경우엔 Model단에서 처리하기 때문에 구현하지 않았습니다.
 
-</br>
+<br>
 
 *그래서 어떻게 사용할건데?*
 
-</br>
+<br>
 
 ```python
 from django.db import models
