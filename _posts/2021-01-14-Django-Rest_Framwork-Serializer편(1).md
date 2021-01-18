@@ -103,6 +103,8 @@ class CustomGroup(models.Model):
     )
 ```
 
+<br>
+
 ```python
 from rest_framework import serializers
 from .models import CustomGroup
@@ -115,6 +117,8 @@ class CustomGroupSerializer(serializers.ModelSerializer):
 ```
 
 위는 실제 저희 Bizcowork에서 사용하고있는 간단한 Group Model과 Group Serializer입니다. 해당 Serailizer에 View를 통해 Response로 data를 입력해주면, 올바른 요청인지 판단한 후, DB에 insert 해주거나 update를 하는 가장 기본적인 Serailizer 형태입니다.
+
+<br>
 
 # DRF에서의 Serializer
 
@@ -140,6 +144,8 @@ GET app/group HTTP/1.1
 Host: 127.0.0.1:8000
 Authorization: Token abcd
 ```
+
+<br>
 
 ## Serialize and Deserialize
 
