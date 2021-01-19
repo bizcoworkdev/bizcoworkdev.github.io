@@ -252,4 +252,4 @@ group에 위에 작성했던 CustomGroupSerializer만 할당해주면, 최종적
 (0.000) SELECT "custom_group"."id", "custom_group"."name", "custom_group"."description" FROM "custom_group" INNER JOIN "custom_user_group" ON ("custom_group"."id" = "custom_user_group"."group_id") WHERE "custom_user_group"."user_id" = 5; args=(5,)
 ```
 
-만약, 10000명의 회원이 있는 경우에는 10000줄의 query를 실행하기 때문에 성능적으로 문제가 일어 날 수 밖에 없습니다. 이를 해결하는 방법으로, [to_representation](https://www.django-rest-framework.org/api-guide/relations/)과 [select_related](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#select-related), [prefetch_related](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#prefetch-related)가 있습니다. 이는 다음 포스트에서 다뤄보도록 하겠습니다.
+만약, 10000명의 회원이 있는 경우에는 10001줄의 query를 실행하기 때문에 성능적으로 문제가 일어 날 수 밖에 없습니다.  이는 처음 1번의 호출로 N개의 모델을 가져온 후 N개의 모델을 순차적으로 돌면서 query를 호출하기 때문입니다. 이는 ORM에서 빈번하게 일어나고, N+1 쿼리 이슈라고 합니다. 성능문제에 지대한 영향을 미치는 이슈이므로 django에서는 이를 해결하는 방법으로, [select_related](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#select-related), [prefetch_related](https://docs.djangoproject.com/en/3.1/ref/models/querysets/#prefetch-related)를 제공하고 있습니다. 이는 다음 포스트에서 다뤄보도록 하겠습니다.
